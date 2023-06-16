@@ -1,0 +1,23 @@
+.my-form {
+  background-color: #f4f4f4;
+  border: 1px solid black;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-size: large;
+}
+
+.my-form input {
+  width: 70px;
+  height: 25px;
+}
+
+.my-form button {
+  margin-left: 5px;
+  color: white;
+  font-size:medium;
+  background-color:rgb(89, 89, 89);
+  border: none;
+  padding: 5px;
+}
+

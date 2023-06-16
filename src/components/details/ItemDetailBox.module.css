@@ -1,0 +1,40 @@
+.hasNot {
+  display: flex;
+  background-color: rgb(214, 211, 211);
+}
+.left {
+  width: 50%;
+  display: flex;
+  justify-content: center; /* horizontally center items */
+  align-items: center; /* vertically center items */
+}
+.left img {
+  width: 35%;
+  height: auto;
+
+}
+
+.right {
+  width: 50%;
+  text-align: center;
+ padding-bottom: 30px;
+}
+
+.right p{
+    font-size: x-large;
+}
+.box button{
+    background-color: green;
+    border: none;
+    color:white;
+    font-size: large;
+    text-align: center;
+    padding: 20px;
+}
+
+.box button:hover{
+    background-color: rgb(2, 76, 2);
+}
+.box button:active{
+    transform: translateX(4px);
+}

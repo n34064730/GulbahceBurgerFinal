@@ -1,0 +1,50 @@
+.basket {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(168, 168, 168);
+  justify-content: space-between;
+}
+.basket img {
+  width: 100px;
+  height: auto;
+}
+.side {
+  margin-left: 10px;
+  display: flex;
+}
+.side p {
+  margin-top: 35px;
+  font-size: larger;
+  margin-left: 5px;
+}
+
+.btn {
+  background-color: red;
+  color: white;
+  border: none;
+  text-align: center;
+  font-size: x-large;
+  padding: 15px 30px;
+  height: 70ğx;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: rgb(107, 20, 20);
+}
+.btn:active {
+  transform: translateY(4px);
+}
+
+.btn.d{
+    background-color: black;
+}
+
+.btn.d:active {
+    transform: translateY(0px);
+  }
+.total {
+  color: red;
+}

@@ -1,0 +1,29 @@
+.contact-info {
+  height: 50px;
+  padding-top: 25px;
+
+  flex-direction: row;
+  justify-content: space-around;
+
+  color: black;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-info p {
+  padding-top: 6px;
+  margin: 0px;
+  margin-left: 5px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+}
+
+.contact-info img {
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+}
