@@ -25,10 +25,7 @@ function BasketTotal() {
         </p>
       </div>
 
-      <button
-        disabled={clickable ? "disabled" : ""}
-        className={`${classes.btn} ${clickable ? "" : classes.d}`}
-      >
+      <button disabled={!clickable} className={classes.btn}>
         Purchase
       </button>
     </div>

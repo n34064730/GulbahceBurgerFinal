@@ -38,13 +38,12 @@
   transform: translateY(4px);
 }
 
-.btn.d{
-    background-color: black;
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
 }
 
-.btn.d:active {
-    transform: translateY(0px);
-  }
 .total {
   color: red;
 }

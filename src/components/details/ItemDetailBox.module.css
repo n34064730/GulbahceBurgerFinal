@@ -9,45 +9,56 @@
   align-items: center; /* vertically center items */
 }
 .left img {
-  width: 35%;
+  width: 350px;
   height: auto;
-
 }
 
 .right {
   width: 50%;
   text-align: center;
- padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
-.right p{
-    font-size: x-large;
+.right p {
+  font-size: x-large;
 }
-.box button{
-    background-color: green;
-    border: none;
-    color:white;
-    font-size: large;
-    text-align: center;
-    padding: 20px;
-}
-
-.box button:hover{
-    background-color: rgb(2, 76, 2);
-}
-.box button:active{
-    transform: translateX(4px);
-}
-
-.tleft{
+.box button {
+  background-color: green;
+  border: none;
+  color: white;
+  font-size: large;
   text-align: center;
+  padding: 20px;
 }
-.tleft img{
-  width: 80%;
+
+.box button:hover {
+  background-color: rgb(2, 76, 2);
+}
+
+.box button:active {
+  transform: translateX(4px);
+}
+
+.box button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none; 
+}
+
+
+.tleft {
+  text-align: center;
+  width: 50%;
+}
+.tleft img {
+  width: 500px;
   height: auto;
 }
 
-.tleft p{
+.tleft p {
   font-size: xx-large;
   margin: 0px;
+}
+.right{
+  width: 50%;
 }

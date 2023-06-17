@@ -5,12 +5,18 @@ import classes from "./ItemDetailBox.module.css";
 function ItemDetailBox() {
   const [hasTypes, setHasTypes] = useState(false);
   const ctx = useContext(ItemContext);
-  const [updatedPrice, setUpdatedPrice] = useState(0);
+  const [updatedPrice, setUpdatedPrice] = useState(ctx.item.price);
+  const [itemType, setItemType] = useState("Standart");
+  const [clickable, setClickable] = useState(false);
 
-  const addToCartHandler= () =>{
-    ctx.item.price+=updatedPrice;
-    
-  }
+  const addToCart = () => {
+    ctx.onAddtoCart({
+      name: ctx.item.name,
+      price: updatedPrice,
+      quantitiy: 1,
+      itemType: itemType,
+    });
+  };
 
   useEffect(() => {
     if (Object.keys(ctx.item.itemTypes).length > 0) {
@@ -39,15 +45,17 @@ function ItemDetailBox() {
                       ctx.item.price + ctx.item.itemTypes.prices[index];
 
                     setUpdatedPrice(selectedPrice);
+                    setItemType(name);
+                    setClickable(true);
                   }}
                 />
                 <label>{name}</label>
               </div>
             ))}
+            <button disabled={!clickable} onClick={addToCart}>
+              Add to Basket
+            </button>
           </div>
-          <button onClick={() => ctx.onAddtoCart(ctx.item)}>
-            Add to Basket
-          </button>
         </div>
       )}
 
@@ -59,9 +67,7 @@ function ItemDetailBox() {
           <div className={classes.right}>
             <h1>{ctx.item.name}</h1>
             <p>{ctx.item.price} TL</p>
-            <button onClick={() => ctx.onAddtoCart(ctx.item)}>
-              Add to Basket!
-            </button>
+            <button onClick={addToCart}>Add to Basket!</button>
           </div>
         </div>
       )}
