@@ -38,3 +38,16 @@
 .box button:active{
     transform: translateX(4px);
 }
+
+.tleft{
+  text-align: center;
+}
+.tleft img{
+  width: 80%;
+  height: auto;
+}
+
+.tleft p{
+  font-size: xx-large;
+  margin: 0px;
+}
