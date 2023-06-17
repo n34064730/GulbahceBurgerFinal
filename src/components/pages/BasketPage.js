@@ -1,13 +1,14 @@
-import React from 'react'
-import BasketTotal from '../details/BasketTotal'
+import React from "react";
+import BasketTotal from "../details/BasketTotal";
+import BasketContents from "../details/BasketContents";
 
 function BasketPage() {
   return (
     <div>
-      <BasketTotal/>
-      
+      <BasketTotal />
+      <BasketContents />
     </div>
-  )
+  );
 }
 
-export default BasketPage
+export default BasketPage;

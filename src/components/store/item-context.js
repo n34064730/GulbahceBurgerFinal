@@ -1,7 +1,14 @@
 import React, { createContext, useState } from "react";
 
 const ItemContext = createContext({
-  basketList: [],
+  basketList: [
+    {
+      name: "",
+      price: 0,
+      quantitiy: 0,
+      itemType: "",
+    },
+  ],
   item: {
     name: "",
     price: 0,
@@ -31,6 +38,7 @@ export const ItemContextProvider = (props) => {
   };
 
   const addToCart = (item) => {
+    let quantitiy = 0;
     setTotalAmount(totalAmount + item.price);
     setBasket((prevBasket) => [...prevBasket, item]);
   };

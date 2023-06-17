@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./NameBox.css";
+import classes from"./NameBox.module.css";
 
 const NameBox = () => {
   const [isSubmit, setIsSubmit] = useState(false);
@@ -22,14 +22,14 @@ const NameBox = () => {
 
   if (isSubmit) {
     return (
-      <form className={"my-form"}>
+      <form className={classes["my-form"]}>
         <label>Welcome {enteredInput}</label>
       </form>
     );
   } else {
     return (
-      <form className={"my-form"} onSubmit={submitHandler}>
-        <label>Please enter your name for a personalized experience: </label>
+      <form className={classes["my-form"]} onSubmit={submitHandler}>
+        <label className={classes.lbl}>Please enter your name for a personalized experience: </label>
         <input type="text" onChange={inputHandler}></input>
         <button style={{ backgroundColor: validName ? "" : "red" }}>
           Submit
