@@ -2,6 +2,11 @@
   display: flex;
   background-color: rgb(214, 211, 211);
 }
+.box {
+  border: black 1px solid;
+  margin: 40px 30px;
+  background-color: #ebebeb;
+}
 .left {
   width: 50%;
   display: flex;
@@ -14,6 +19,9 @@
 }
 
 .right {
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   width: 50%;
   text-align: center;
   padding-bottom: 30px;
@@ -42,11 +50,15 @@
 .box button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  transform: none; 
+  transform: none;
 }
 
+.has {
+  display: flex;
+}
 
 .tleft {
+  background-color: #f4f4f4;
   text-align: center;
   width: 50%;
 }
@@ -59,6 +71,23 @@
   font-size: xx-large;
   margin: 0px;
 }
-.right{
+.tright {
   width: 50%;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.btn {
+  text-align: center;
+  margin-top: 50px;
+}
+
+label {
+  font-size: xx-large;
+}
+
+.lines {
+  margin-bottom: 20px;
+  margin-left: 60px;
 }

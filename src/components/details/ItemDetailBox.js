@@ -27,7 +27,7 @@ function ItemDetailBox() {
   return (
     <div className={classes.box}>
       {hasTypes && (
-        <div className={classes.hasNot}>
+        <div className={classes.has}>
           <div className={classes.tleft}>
             <h1>{ctx.item.name}</h1>
             <p>{ctx.item.price} TL</p>
@@ -35,7 +35,7 @@ function ItemDetailBox() {
           </div>
           <div className={classes.tright}>
             {ctx.item.itemTypes.sizes.map((name, index) => (
-              <div key={name}>
+              <div key={name} className={classes.lines}>
                 <input
                   type="radio"
                   name="size"
@@ -52,9 +52,13 @@ function ItemDetailBox() {
                 <label>{name}</label>
               </div>
             ))}
-            <button disabled={!clickable} onClick={addToCart}>
-              Add to Basket
-            </button>
+
+            <div className={classes.btn}>
+              {" "}
+              <button disabled={!clickable} onClick={addToCart}>
+                Add to Basket
+              </button>
+            </div>
           </div>
         </div>
       )}
