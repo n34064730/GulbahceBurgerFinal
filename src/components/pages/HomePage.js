@@ -1,5 +1,7 @@
 import MenuList from "../MenuList";
 import NameBox from "../NameBox";
+import Footer from "../Footer";
+import Header from "../Header";
 
 const menuList = [
   {
@@ -97,8 +99,10 @@ const menuList = [
 function HomePage() {
   return (
     <div>
+      <Header />
       <NameBox />
       <MenuList menu_list={menuList} />
+      <Footer />
     </div>
   );
 }
