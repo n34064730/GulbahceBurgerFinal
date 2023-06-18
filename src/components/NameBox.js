@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import classes from "./NameBox.module.css";
-//İSİM KAYDEDİLMİYOR
 
 const NameBox = () => {
   const [isSubmit, setIsSubmit] = useState(localStorage.getItem("login"));
