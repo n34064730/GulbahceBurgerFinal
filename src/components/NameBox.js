@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import classes from "./NameBox.module.css";
 //İSİM KAYDEDİLMİYOR
 
 const NameBox = () => {
-  const [isSubmit, setIsSubmit] = useState(false);
-  const [enteredInput, setEnteredInput] = useState("");
+  const [isSubmit, setIsSubmit] = useState(localStorage.getItem("login"));
+  const [enteredInput, setEnteredInput] = useState(
+    localStorage.getItem("name")
+  );
   const [validName, setValidName] = useState(true);
   const inputHandler = (event) => {
     setEnteredInput(event.target.value);
+    localStorage.setItem("name", event.target.value);
   };
 
   const submitHandler = (event) => {
@@ -16,12 +19,16 @@ const NameBox = () => {
     const alphabeticRegex = /^[A-Za-z]+$/;
     if (alphabeticRegex.test(enteredInput) && enteredInput.trim().length > 0) {
       setIsSubmit(true);
+      localStorage.setItem("login", true);
     } else {
       setValidName(false);
     }
   };
-  
 
+  useEffect(() => {
+    localStorage.removeItem("login");
+    localStorage.removeItem("name");
+  }, []);
 
   if (isSubmit) {
     return (

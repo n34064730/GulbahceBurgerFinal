@@ -7,7 +7,6 @@ import classes from "./BasketContents.module.css";
 function BasketContents() {
   const ctx = useContext(ItemContext);
   if (ctx.basketList.length > 0) {
-    console.log(ctx.basketList[0].itemType);
     return (
       <div className={classes["basket-content"]}>
         {ctx.basketList.map((item) => (
