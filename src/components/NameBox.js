@@ -25,11 +25,6 @@ const NameBox = () => {
     }
   };
 
-  useEffect(() => {
-    localStorage.removeItem("login");
-    localStorage.removeItem("name");
-  }, []);
-
   if (isSubmit) {
     return (
       <form className={classes["my-form"]}>

@@ -6,15 +6,11 @@ import HomePage from "./components/pages/HomePage";
 function App() {
   return (
     <Router>
-
- 
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/menu" element={<MenuItemPage />} />
         <Route path="/basket" element={<BasketPage />} />
       </Routes>
-
-      
     </Router>
   );
 }

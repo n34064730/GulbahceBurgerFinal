@@ -23,7 +23,7 @@ function BasketContents() {
   return (
     <div className={classes["basket-content"]} style={{ height: "250px" }}>
       <h1 style={{ color: "red", textAlign: "center", marginTop: "100px" }}>
-        Sepetiniz boş!
+        You did not add anything to the basket!
       </h1>
     </div>
   );
