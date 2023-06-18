@@ -1,5 +1,5 @@
-import NameBox from "../NameBox";
 import MenuList from "../MenuList";
+import NameBox from "../NameBox";
 
 const menuList = [
   {
@@ -25,8 +25,12 @@ const menuList = [
     name: "French Fries",
     price: "25 TL",
     types: {
-      sizes:["Small Size (+0 TL)", "Medium Size (+10 TL)", "Large Size (+20 TL)"],
-      prices:[0,10,20]
+      sizes: [
+        "Small Size (+0 TL)",
+        "Medium Size (+10 TL)",
+        "Large Size (+20 TL)",
+      ],
+      prices: [0, 10, 20],
     },
   },
   {
@@ -40,8 +44,8 @@ const menuList = [
     name: "Fizzy Drink",
     price: "20 TL",
     types: {
-      sizes:["Cola (+0 TL)", "Fanta (+0 TL)", "Sprite (+0 TL)"],
-      prices:[0,0,0]
+      sizes: ["Cola (+0 TL)", "Fanta (+0 TL)", "Sprite (+0 TL)"],
+      prices: [0, 0, 0],
     },
   },
   {
@@ -67,8 +71,13 @@ const menuList = [
     name: "Soft Serve Ice Cream",
     price: "15 TL",
     types: {
-      sizes:[" Vanilla (+0 TL)", "Chocolate (+0 TL)", "Strawberry (+5 TL)", "Mint (+10 TL)"],
-      prices:[0,0,5,10]
+      sizes: [
+        " Vanilla (+0 TL)",
+        "Chocolate (+0 TL)",
+        "Strawberry (+5 TL)",
+        "Mint (+10 TL)",
+      ],
+      prices: [0, 0, 5, 10],
     },
   },
   {

@@ -38,9 +38,25 @@ export const ItemContextProvider = (props) => {
   };
 
   const addToCart = (item) => {
-    let quantitiy = 0;
-    setTotalAmount(totalAmount + item.price);
-    setBasket((prevBasket) => [...prevBasket, item]);
+    const index = basket.findIndex(
+      (listItem) => item.itemType === listItem.itemType
+    );
+    const existingItem = basket[index];
+    let updatedItems;
+
+    if (existingItem) {
+      const updatedItem = {
+        ...existingItem,
+        quantitiy: existingItem.quantitiy + 1,
+      };
+      updatedItems = [...basket];
+      updatedItems[index] = updatedItem;
+      setBasket(updatedItems);
+      setTotalAmount(totalAmount + item.price);
+    } else {
+      setBasket((prevBasket) => [...prevBasket, item]);
+      setTotalAmount(totalAmount + item.price);
+    }
   };
 
   return (

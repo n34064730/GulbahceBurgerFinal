@@ -20,6 +20,8 @@ const NameBox = () => {
       setValidName(false);
     }
   };
+  
+
 
   if (isSubmit) {
     return (
